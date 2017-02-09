@@ -58,7 +58,7 @@ extension Api: TargetType, Authorizable {
         }
     }
 
-    var baseURL: URL { return URL(string: "http://192.168.2.13:3000")! }
+    var baseURL: URL { return URL(string: "http://localhost:3000")! }
     var path: String {
         switch self {
         case .signIn:

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */; };
+		0C1A95B41E4B0D0400B03F12 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95B31E4B0D0400B03F12 /* Account.swift */; };
+		0C1A95B61E4B456200B03F12 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B51E4B456200B03F12 /* Argo.framework */; };
+		0C1A95B81E4B518500B03F12 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B71E4B518500B03F12 /* Runes.framework */; };
+		0C1A95BA1E4B5E5300B03F12 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B91E4B5E5300B03F12 /* Curry.framework */; };
 		0C545FC71E486598004225E7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FC61E486598004225E7 /* MeViewController.swift */; };
 		0C545FC91E4869AC004225E7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		0C545FD01E48B052004225E7 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */; };
@@ -21,13 +26,17 @@
 		0C9BE1841E481D000092439B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BE1831E481D000092439B /* User.swift */; };
 		0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC744B71E2C6781007EC830 /* AppDelegate.swift */; };
 		0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC744B91E2C6781007EC830 /* DashboardViewController.swift */; };
-		0CC744BC1E2C6781007EC830 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC744BB1E2C6781007EC830 /* AccountsViewController.swift */; };
 		0CC744BF1E2C6781007EC830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744BD1E2C6781007EC830 /* Main.storyboard */; };
 		0CC744C11E2C6781007EC830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744C01E2C6781007EC830 /* Assets.xcassets */; };
 		0CC744C41E2C6781007EC830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744C21E2C6781007EC830 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
+		0C1A95B31E4B0D0400B03F12 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = ../Account.swift; sourceTree = "<group>"; };
+		0C1A95B51E4B456200B03F12 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		0C1A95B71E4B518500B03F12 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		0C1A95B91E4B5E5300B03F12 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		0C545FC61E486598004225E7 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		0C545FC81E4869AC004225E7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
@@ -43,7 +52,6 @@
 		0CC744B41E2C6781007EC830 /* bbuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC744B71E2C6781007EC830 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC744B91E2C6781007EC830 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		0CC744BB1E2C6781007EC830 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		0CC744BE1E2C6781007EC830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CC744C01E2C6781007EC830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CC744C31E2C6781007EC830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +69,9 @@
 				0C545FD81E49BCA1004225E7 /* Moya.framework in Frameworks */,
 				0C545FDA1E49CF75004225E7 /* Alamofire.framework in Frameworks */,
 				0C545FDC1E49DDB5004225E7 /* Result.framework in Frameworks */,
+				0C1A95B61E4B456200B03F12 /* Argo.framework in Frameworks */,
+				0C1A95B81E4B518500B03F12 /* Runes.framework in Frameworks */,
+				0C1A95BA1E4B5E5300B03F12 /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +81,9 @@
 		0C9BE17D1E481B580092439B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A95B91E4B5E5300B03F12 /* Curry.framework */,
+				0C1A95B71E4B518500B03F12 /* Runes.framework */,
+				0C1A95B51E4B456200B03F12 /* Argo.framework */,
 				0C545FDB1E49DDB5004225E7 /* Result.framework */,
 				0C545FD91E49CF75004225E7 /* Alamofire.framework */,
 				0C545FD71E49BCA1004225E7 /* Moya.framework */,
@@ -101,11 +115,12 @@
 		0CC744B61E2C6781007EC830 /* bbuddy */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A95B31E4B0D0400B03F12 /* Account.swift */,
 				0CC744B71E2C6781007EC830 /* AppDelegate.swift */,
 				0CC744B91E2C6781007EC830 /* DashboardViewController.swift */,
-				0CC744BB1E2C6781007EC830 /* AccountsViewController.swift */,
 				0C545FD51E49AEAA004225E7 /* Api.swift */,
 				0CC744BD1E2C6781007EC830 /* Main.storyboard */,
+				0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */,
 				0C545FD31E499FD0004225E7 /* LoginStyles.swift */,
 				0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */,
 				0C545FC61E486598004225E7 /* MeViewController.swift */,
@@ -199,6 +214,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -217,8 +235,9 @@
 				0C545FC71E486598004225E7 /* MeViewController.swift in Sources */,
 				0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */,
 				0C9BE1841E481D000092439B /* User.swift in Sources */,
-				0CC744BC1E2C6781007EC830 /* AccountsViewController.swift in Sources */,
+				0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */,
 				0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */,
+				0C1A95B41E4B0D0400B03F12 /* Account.swift in Sources */,
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
 				0C545FD61E49AEAA004225E7 /* Api.swift in Sources */,
 				0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */,
