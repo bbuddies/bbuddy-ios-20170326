@@ -14,6 +14,7 @@ enum ApiDefinition {
     case showUser(id: Int)
     case showAccounts
     case updateAccount(account: Account)
+    case deleteAccount(account: Account)
 }
 
 protocol Authorizable {
@@ -42,6 +43,8 @@ extension ApiDefinition: TargetType, Authorizable {
             return "/accounts"
         case .updateAccount(let account):
             return "/accounts/\(account.id)"
+        case .deleteAccount(let account):
+            return "/accounts/\(account.id)"
         }
     }
     var method: Moya.Method {
@@ -52,11 +55,13 @@ extension ApiDefinition: TargetType, Authorizable {
             return .post
         case .updateAccount:
             return .put
+        case .deleteAccount:
+            return .delete
         }
     }
     var parameters: [String: Any]? {
         switch self {
-        case .showUser, .showAccounts:
+        case .showUser, .showAccounts, .deleteAccount:
             return nil
         case .signIn(let email, let password):
             return ["email": email, "password": password]
@@ -85,7 +90,7 @@ extension ApiDefinition: TargetType, Authorizable {
                     return Data()
             }
             return data
-        case .updateAccount(let account):
+        case .deleteAccount(let account), .updateAccount(let account):
             return "{\"id\": \(account.id), \"name\": \(account.name), \"balance\": \(account.balance)}".utf8Encoded
         }
     }

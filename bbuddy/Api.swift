@@ -101,4 +101,10 @@ class Api {
             action()
         }
     }
+    
+    func deleteAccount(_ account: Account, to action: @escaping () -> Void){
+        request(.deleteAccount(account: account)) { _ in
+            action()
+        }
+    }
 }
