@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Moya
-import Argo
-import Cely
 
 class AccountsTableViewController: UITableViewController {
     
@@ -19,78 +16,12 @@ class AccountsTableViewController: UITableViewController {
         }
     }
     
-    private func mapArray<T:Decodable>(response: Response) throws -> [T] where T == T.DecodedType {
-        
-        do {
-            //map to JSON
-            let JSON = try response.mapJSON()
-            
-            //decode with Argo
-            let decodedArray:Decoded<[T]>
-            //no root key, it's an array
-            guard let array = JSON as? [AnyObject] else {
-                throw DecodeError.typeMismatch(expected: "\(T.DecodedType.self)", actual: "\(type(of: JSON))")
-            }
-            decodedArray = decode(array)
-            
-            //return array of decoded objects, or throw decoding error
-            return try decodedValue(decoded: decodedArray)
-            
-        } catch {
-            
-            throw error
-        }
-    }
-    
-    private func decodedValue<T>(decoded: Decoded<T>) throws -> T {
-        
-        switch decoded {
-        case .success(let value):
-            return value
-        case .failure(let error):
-            throw error
-        }
-    }
+    private let api = Api()
     
     private func fetchAccounts(){
-        let provider  = MoyaProvider<Api>(
-            plugins: [
-                AuthPlugin(tokenClosure: {
-                    if
-                        let uid = User.get(.email) as? String,
-                        let client = User.get(.client) as? String,
-                        let accessToken = User.get(.token) as? String,
-                        let type = User.get(.type) as? String {
-                        return AuthorizedToken(
-                            uid: uid,
-                            client: client,
-                            accessToken: accessToken,
-                            type: type
-                        )
-                    }
-                    return nil
-                })
-            ]
-        )
-        provider.request(.showAccounts) { result in
-            switch result {
-            case .success(let response):
-                switch response.statusCode {
-                case 200...299:
-                    DispatchQueue.main.async { [unowned me = self] in
-                        do {
-                            me.accounts = try me.mapArray(response: response)
-                        } catch {
-                            
-                        }
-                    }
-                case 401:
-                    Cely.logout()
-                default:
-                    print("error: \(response.statusCode)")
-                }
-            case .failure(let error):
-                print("failure: \(error)")
+        api.showAccounts { accounts in
+            DispatchQueue.main.async { [unowned me = self] in
+                me.accounts = accounts
             }
         }
     }

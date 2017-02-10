@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Moya
-import Cely
 
 class AccountDetailViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var balanceField: UITextField!
+    
+    private let api = Api()
     
     var account: Account! {
         didSet {
@@ -44,43 +44,11 @@ class AccountDetailViewController: UIViewController {
     }
     
     private func updateAccount(_ account: Account) {
-        let provider  = MoyaProvider<Api>(
-            plugins: [
-                AuthPlugin(tokenClosure: {
-                    if
-                        let uid = User.get(.email) as? String,
-                        let client = User.get(.client) as? String,
-                        let accessToken = User.get(.token) as? String,
-                        let type = User.get(.type) as? String {
-                        return AuthorizedToken(
-                            uid: uid,
-                            client: client,
-                            accessToken: accessToken,
-                            type: type
-                        )
-                    }
-                    return nil
-                })
-            ]
-        )
-        provider.request(.updateAccount(account: account)) { result in
-            switch result {
-            case .success(let response):
-                switch response.statusCode {
-                case 200...299:
-                    DispatchQueue.main.async { [unowned me = self] in
-                        _ = me.navigationController?.popViewController(animated: true)
-                    }
-                case 401:
-                    Cely.logout()
-                default:
-                    print("error: \(response.statusCode)")
-                }
-            case .failure(let error):
-                print("failure: \(error)")
+        api.updateAccount(account) {
+            DispatchQueue.main.async { [unowned me = self] in
+                _ = me.navigationController?.popViewController(animated: true)
             }
         }
- 
     }
 
     /*

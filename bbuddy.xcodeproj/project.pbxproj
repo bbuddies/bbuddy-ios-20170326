@@ -13,12 +13,14 @@
 		0C1A95B81E4B518500B03F12 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B71E4B518500B03F12 /* Runes.framework */; };
 		0C1A95BA1E4B5E5300B03F12 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B91E4B5E5300B03F12 /* Curry.framework */; };
 		0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */; };
+		0C1A95C81E4DF1AE00B03F12 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
+		0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */; };
 		0C545FC71E486598004225E7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FC61E486598004225E7 /* MeViewController.swift */; };
 		0C545FC91E4869AC004225E7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		0C545FD01E48B052004225E7 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */; };
 		0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */; };
 		0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD31E499FD0004225E7 /* LoginStyles.swift */; };
-		0C545FD61E49AEAA004225E7 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD51E49AEAA004225E7 /* Api.swift */; };
+		0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD51E49AEAA004225E7 /* ApiDefinition.swift */; };
 		0C545FD81E49BCA1004225E7 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD71E49BCA1004225E7 /* Moya.framework */; };
 		0C545FDA1E49CF75004225E7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD91E49CF75004225E7 /* Alamofire.framework */; };
 		0C545FDC1E49DDB5004225E7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FDB1E49DDB5004225E7 /* Result.framework */; };
@@ -39,12 +41,14 @@
 		0C1A95B71E4B518500B03F12 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		0C1A95B91E4B5E5300B03F12 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		0C1A95C71E4DF1AE00B03F12 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		0C545FC61E486598004225E7 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		0C545FC81E4869AC004225E7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
 		0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		0C545FD31E499FD0004225E7 /* LoginStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStyles.swift; sourceTree = "<group>"; };
-		0C545FD51E49AEAA004225E7 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		0C545FD51E49AEAA004225E7 /* ApiDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDefinition.swift; sourceTree = "<group>"; };
 		0C545FD71E49BCA1004225E7 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		0C545FD91E49CF75004225E7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0C545FDB1E49DDB5004225E7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -120,7 +124,9 @@
 				0C1A95B31E4B0D0400B03F12 /* Account.swift */,
 				0CC744B71E2C6781007EC830 /* AppDelegate.swift */,
 				0CC744B91E2C6781007EC830 /* DashboardViewController.swift */,
-				0C545FD51E49AEAA004225E7 /* Api.swift */,
+				0C545FD51E49AEAA004225E7 /* ApiDefinition.swift */,
+				0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */,
+				0C1A95C71E4DF1AE00B03F12 /* Api.swift */,
 				0CC744BD1E2C6781007EC830 /* Main.storyboard */,
 				0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */,
 				0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */,
@@ -240,10 +246,12 @@
 				0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */,
 				0C9BE1841E481D000092439B /* User.swift in Sources */,
 				0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */,
+				0C1A95C81E4DF1AE00B03F12 /* Api.swift in Sources */,
 				0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */,
 				0C1A95B41E4B0D0400B03F12 /* Account.swift in Sources */,
+				0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */,
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
-				0C545FD61E49AEAA004225E7 /* Api.swift in Sources */,
+				0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */,
 				0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
