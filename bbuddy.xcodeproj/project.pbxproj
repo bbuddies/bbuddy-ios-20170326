@@ -12,6 +12,7 @@
 		0C1A95B61E4B456200B03F12 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B51E4B456200B03F12 /* Argo.framework */; };
 		0C1A95B81E4B518500B03F12 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B71E4B518500B03F12 /* Runes.framework */; };
 		0C1A95BA1E4B5E5300B03F12 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B91E4B5E5300B03F12 /* Curry.framework */; };
+		0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */; };
 		0C545FC71E486598004225E7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FC61E486598004225E7 /* MeViewController.swift */; };
 		0C545FC91E4869AC004225E7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		0C545FD01E48B052004225E7 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */; };
@@ -37,6 +38,7 @@
 		0C1A95B51E4B456200B03F12 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		0C1A95B71E4B518500B03F12 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		0C1A95B91E4B5E5300B03F12 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
+		0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
 		0C545FC61E486598004225E7 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		0C545FC81E4869AC004225E7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				0CC744B91E2C6781007EC830 /* DashboardViewController.swift */,
 				0C545FD51E49AEAA004225E7 /* Api.swift */,
 				0CC744BD1E2C6781007EC830 /* Main.storyboard */,
+				0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */,
 				0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */,
 				0C545FD31E499FD0004225E7 /* LoginStyles.swift */,
 				0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C545FC71E486598004225E7 /* MeViewController.swift in Sources */,
+				0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */,
 				0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */,
 				0C9BE1841E481D000092439B /* User.swift in Sources */,
 				0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */,
