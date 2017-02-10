@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class AccountDetailViewController: UIViewController {
 
@@ -32,6 +33,50 @@ class AccountDetailViewController: UIViewController {
     }
     
     @IBAction func saveAccount(_ sender: UIButton) {
+        if let name = nameField.text,
+            let balance = Int(balanceField.text ?? ""){
+            var accountToUpdate = account!
+            accountToUpdate.name = name
+            accountToUpdate.balance = balance
+            updateAccount(accountToUpdate)
+        }
+    }
+    
+    private func updateAccount(_ account: Account) {
+        let provider  = MoyaProvider<Api>(
+            plugins: [
+                AuthPlugin(tokenClosure: {
+                    if
+                        let uid = User.get(.email) as? String,
+                        let client = User.get(.client) as? String,
+                        let accessToken = User.get(.token) as? String,
+                        let type = User.get(.type) as? String {
+                        return AuthorizedToken(
+                            uid: uid,
+                            client: client,
+                            accessToken: accessToken,
+                            type: type
+                        )
+                    }
+                    return nil
+                })
+            ]
+        )
+        provider.request(.updateAccount(account: account)) { result in
+            switch result {
+            case .success(let response):
+                guard (200...299).contains(response.statusCode) else{
+                    print("error: \(response.statusCode)")
+                    return
+                }
+                DispatchQueue.main.async { [unowned me = self] in
+                    _ = me.navigationController?.popViewController(animated: true)
+                }
+            case .failure(let error):
+                print("failure: \(error)")
+            }
+        }
+ 
     }
 
     /*

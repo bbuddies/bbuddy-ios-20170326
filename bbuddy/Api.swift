@@ -13,6 +13,7 @@ enum Api {
     case signIn(email: String, password: String)
     case showUser(id: Int)
     case showAccounts
+    case updateAccount(account: Account)
 }
 
 protocol Authorizable {
@@ -67,6 +68,8 @@ extension Api: TargetType, Authorizable {
             return "/users/\(id)"
         case .showAccounts:
             return "/accounts"
+        case .updateAccount(let account):
+            return "/accounts/\(account.id)"
         }
     }
     var method: Moya.Method {
@@ -75,6 +78,8 @@ extension Api: TargetType, Authorizable {
             return .get
         case .signIn:
             return .post
+        case .updateAccount:
+            return .put
         }
     }
     var parameters: [String: Any]? {
@@ -83,11 +88,13 @@ extension Api: TargetType, Authorizable {
             return nil
         case .signIn(let email, let password):
             return ["email": email, "password": password]
+        case .updateAccount(let account):
+            return ["name": account.name, "balance": account.balance]
         }
     }
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .signIn:
+        case .signIn, .updateAccount:
             return JSONEncoding.default
         default:
             return URLEncoding.default
@@ -106,13 +113,12 @@ extension Api: TargetType, Authorizable {
                     return Data()
             }
             return data
+        case .updateAccount(let account):
+            return "{\"id\": \(account.id), \"name\": \(account.name), \"balance\": \(account.balance)}".utf8Encoded
         }
     }
     var task: Task {
-        switch self {
-        case .signIn, .showUser, .showAccounts:
-            return .request
-        }
+        return .request
     }
 }
 
