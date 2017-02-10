@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import Argo
+import Cely
 
 class AccountsTableViewController: UITableViewController {
     
@@ -74,16 +75,19 @@ class AccountsTableViewController: UITableViewController {
         provider.request(.showAccounts) { result in
             switch result {
             case .success(let response):
-                guard (200...299).contains(response.statusCode) else{
-                    print("error: \(response.statusCode)")
-                    return
-                }
-                DispatchQueue.main.async { [unowned me = self] in
-                    do {
-                        me.accounts = try me.mapArray(response: response)
-                    } catch {
-                        
+                switch response.statusCode {
+                case 200...299:
+                    DispatchQueue.main.async { [unowned me = self] in
+                        do {
+                            me.accounts = try me.mapArray(response: response)
+                        } catch {
+                            
+                        }
                     }
+                case 401:
+                    Cely.logout()
+                default:
+                    print("error: \(response.statusCode)")
                 }
             case .failure(let error):
                 print("failure: \(error)")

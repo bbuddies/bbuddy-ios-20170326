@@ -8,6 +8,7 @@
 
 import UIKit
 import Moya
+import Cely
 
 class AccountDetailViewController: UIViewController {
 
@@ -65,12 +66,15 @@ class AccountDetailViewController: UIViewController {
         provider.request(.updateAccount(account: account)) { result in
             switch result {
             case .success(let response):
-                guard (200...299).contains(response.statusCode) else{
+                switch response.statusCode {
+                case 200...299:
+                    DispatchQueue.main.async { [unowned me = self] in
+                        _ = me.navigationController?.popViewController(animated: true)
+                    }
+                case 401:
+                    Cely.logout()
+                default:
                     print("error: \(response.statusCode)")
-                    return
-                }
-                DispatchQueue.main.async { [unowned me = self] in
-                    _ = me.navigationController?.popViewController(animated: true)
                 }
             case .failure(let error):
                 print("failure: \(error)")
