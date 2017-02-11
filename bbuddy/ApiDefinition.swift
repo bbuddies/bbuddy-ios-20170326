@@ -13,6 +13,7 @@ enum ApiDefinition {
     case signIn(email: String, password: String)
     case showUser(id: Int)
     case showAccounts
+    case addAccount(account: Account)
     case updateAccount(account: Account)
     case deleteAccount(account: Account)
 }
@@ -39,11 +40,9 @@ extension ApiDefinition: TargetType, Authorizable {
             return "/auth/sign_in"
         case .showUser(let id):
             return "/users/\(id)"
-        case .showAccounts:
+        case .showAccounts, .addAccount:
             return "/accounts"
-        case .updateAccount(let account):
-            return "/accounts/\(account.id)"
-        case .deleteAccount(let account):
+        case .updateAccount(let account), .deleteAccount(let account):
             return "/accounts/\(account.id)"
         }
     }
@@ -51,7 +50,7 @@ extension ApiDefinition: TargetType, Authorizable {
         switch self {
         case .showUser, .showAccounts:
             return .get
-        case .signIn:
+        case .signIn, .addAccount:
             return .post
         case .updateAccount:
             return .put
@@ -65,13 +64,13 @@ extension ApiDefinition: TargetType, Authorizable {
             return nil
         case .signIn(let email, let password):
             return ["email": email, "password": password]
-        case .updateAccount(let account):
+        case .addAccount(let account), .updateAccount(let account):
             return ["name": account.name, "balance": account.balance]
         }
     }
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .signIn, .updateAccount:
+        case .signIn, .addAccount, .updateAccount:
             return JSONEncoding.default
         default:
             return URLEncoding.default
@@ -90,7 +89,7 @@ extension ApiDefinition: TargetType, Authorizable {
                     return Data()
             }
             return data
-        case .deleteAccount(let account), .updateAccount(let account):
+        case .deleteAccount(let account), .updateAccount(let account), .addAccount(let account):
             return "{\"id\": \(account.id), \"name\": \(account.name), \"balance\": \(account.balance)}".utf8Encoded
         }
     }

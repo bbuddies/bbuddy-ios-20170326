@@ -75,7 +75,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="9f8-9i-uZS" kind="show" id="GD7-Uz-Uw4"/>
+                                    <segue destination="9f8-9i-uZS" kind="show" identifier="EditAccount" id="GD7-Uz-Uw4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -84,7 +84,13 @@
                             <outlet property="delegate" destination="orX-9g-Fbc" id="had-oe-7zJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Accounts" id="jnK-AK-wtz"/>
+                    <navigationItem key="navigationItem" title="Accounts" id="jnK-AK-wtz">
+                        <barButtonItem key="rightBarButtonItem" title="＋" id="xMg-Ri-5JA">
+                            <connections>
+                                <segue destination="9f8-9i-uZS" kind="show" identifier="AddAccount" id="CN3-NN-upW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWF-0O-QVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,4 +229,7 @@
             <point key="canvasLocation" x="749.60000000000002" y="361.16941529235385"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CN3-NN-upW"/>
+    </inferredMetricsTieBreakers>
 </document>

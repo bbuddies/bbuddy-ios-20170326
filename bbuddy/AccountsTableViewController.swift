@@ -50,6 +50,8 @@ class AccountsTableViewController: UITableViewController {
     
     private struct Storyboard{
         static let AccountCellIdentifier = "Account"
+        static let AddAccountSegue = "AddAccount"
+        static let EditAccountSegue = "EditAccount"
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,12 +92,17 @@ class AccountsTableViewController: UITableViewController {
         return true
     }
     */
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationViewController = segue.destination
-        if let accountDetailViewController = destinationViewController as? AccountDetailViewController,
-            let accountIndex = tableView.indexPathForSelectedRow?.row {
-            accountDetailViewController.account = accounts[accountIndex]
+        if let accountDetailViewController = destinationViewController as? AccountDetailViewController {
+            if segue.identifier == Storyboard.AddAccountSegue {
+                accountDetailViewController.account = Account()
+            } else if segue.identifier == Storyboard.EditAccountSegue {
+                if let accountIndex = tableView.indexPathForSelectedRow?.row {
+                    accountDetailViewController.account = accounts[accountIndex]
+                }
+            }
         }
     }
 

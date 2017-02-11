@@ -34,12 +34,19 @@ class AccountDetailViewController: UIViewController {
     }
     
     @IBAction func saveAccount(_ sender: UIButton) {
-        if let name = nameField.text,
-            let balance = Int(balanceField.text ?? ""){
+        if let name = nameField.text, let balance = Int(balanceField.text ?? ""){
             var accountToUpdate = account!
             accountToUpdate.name = name
             accountToUpdate.balance = balance
-            updateAccount(accountToUpdate)
+            account.id > 0 ? updateAccount(accountToUpdate) : addAccount(accountToUpdate)
+        }
+    }
+    
+    private func addAccount(_ account: Account) {
+        api.addAccount(account) {
+            DispatchQueue.main.async { [unowned me = self] in
+                _ = me.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
