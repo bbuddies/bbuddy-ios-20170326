@@ -15,6 +15,9 @@
 		0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */; };
 		0C1A95C81E4DF1AE00B03F12 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
 		0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */; };
+		0C1A95CD1E4EC76100B03F12 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A95CC1E4EC76100B03F12 /* Cartfile.private */; };
+		0C1A95F41E4EC7E500B03F12 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95F21E4EC7E500B03F12 /* Nimble.framework */; };
+		0C1A95F51E4EC7E500B03F12 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95F31E4EC7E500B03F12 /* Quick.framework */; };
 		0C545FC71E486598004225E7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FC61E486598004225E7 /* MeViewController.swift */; };
 		0C545FC91E4869AC004225E7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		0C545FD01E48B052004225E7 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */; };
@@ -43,6 +46,9 @@
 		0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
 		0C1A95C71E4DF1AE00B03F12 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
+		0C1A95CC1E4EC76100B03F12 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		0C1A95F21E4EC7E500B03F12 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		0C1A95F31E4EC7E500B03F12 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0C545FC61E486598004225E7 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		0C545FC81E4869AC004225E7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
@@ -78,6 +84,8 @@
 				0C1A95B61E4B456200B03F12 /* Argo.framework in Frameworks */,
 				0C1A95B81E4B518500B03F12 /* Runes.framework in Frameworks */,
 				0C1A95BA1E4B5E5300B03F12 /* Curry.framework in Frameworks */,
+				0C1A95F41E4EC7E500B03F12 /* Nimble.framework in Frameworks */,
+				0C1A95F51E4EC7E500B03F12 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,8 @@
 		0C9BE17D1E481B580092439B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A95F21E4EC7E500B03F12 /* Nimble.framework */,
+				0C1A95F31E4EC7E500B03F12 /* Quick.framework */,
 				0C1A95B91E4B5E5300B03F12 /* Curry.framework */,
 				0C1A95B71E4B518500B03F12 /* Runes.framework */,
 				0C1A95B51E4B456200B03F12 /* Argo.framework */,
@@ -103,6 +113,7 @@
 		0CC744AB1E2C6781007EC830 = {
 			isa = PBXGroup;
 			children = (
+				0C1A95CC1E4EC76100B03F12 /* Cartfile.private */,
 				0C545FC81E4869AC004225E7 /* Cartfile */,
 				0CC744B61E2C6781007EC830 /* bbuddy */,
 				0CC744B51E2C6781007EC830 /* Products */,
@@ -203,6 +214,7 @@
 			files = (
 				0CC744C41E2C6781007EC830 /* LaunchScreen.storyboard in Resources */,
 				0CC744C11E2C6781007EC830 /* Assets.xcassets in Resources */,
+				0C1A95CD1E4EC76100B03F12 /* Cartfile.private in Resources */,
 				0C545FC91E4869AC004225E7 /* Cartfile in Resources */,
 				0CC744BF1E2C6781007EC830 /* Main.storyboard in Resources */,
 			);
@@ -226,6 +238,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
