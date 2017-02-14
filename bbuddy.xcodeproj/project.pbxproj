@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0AA8EC1E52AAAE008B4B00 /* bbuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0AA8EB1E52AAAE008B4B00 /* bbuddyTests.swift */; };
+		0C0AA8F31E52AAD1008B4B00 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95F21E4EC7E500B03F12 /* Nimble.framework */; };
+		0C0AA8F41E52AAD1008B4B00 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95F31E4EC7E500B03F12 /* Quick.framework */; };
+		0C0AA8F61E52AAD1008B4B00 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0AA8F51E52AAD1008B4B00 /* Cuckoo.framework */; };
+		0C0AA8F91E52AB83008B4B00 /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0AA8F81E52AB83008B4B00 /* AccountTest.swift */; };
+		0C0AA8FB1E52AB9A008B4B00 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0AA8FA1E52AB9A008B4B00 /* GeneratedMocks.swift */; };
 		0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */; };
 		0C1A95B41E4B0D0400B03F12 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95B31E4B0D0400B03F12 /* Account.swift */; };
 		0C1A95B61E4B456200B03F12 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B51E4B456200B03F12 /* Argo.framework */; };
@@ -37,7 +43,23 @@
 		0CC744C41E2C6781007EC830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744C21E2C6781007EC830 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0C0AA8EE1E52AAAE008B4B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CC744AC1E2C6781007EC830 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CC744B31E2C6781007EC830;
+			remoteInfo = bbuddy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0C0AA8E91E52AAAE008B4B00 /* bbuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bbuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0AA8EB1E52AAAE008B4B00 /* bbuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bbuddyTests.swift; sourceTree = "<group>"; };
+		0C0AA8ED1E52AAAE008B4B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C0AA8F51E52AAD1008B4B00 /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
+		0C0AA8F81E52AB83008B4B00 /* AccountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
+		0C0AA8FA1E52AB9A008B4B00 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
 		0C1A95B31E4B0D0400B03F12 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = ../Account.swift; sourceTree = "<group>"; };
 		0C1A95B51E4B456200B03F12 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
@@ -71,6 +93,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C0AA8E61E52AAAE008B4B00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0AA8F61E52AAD1008B4B00 /* Cuckoo.framework in Frameworks */,
+				0C0AA8F31E52AAD1008B4B00 /* Nimble.framework in Frameworks */,
+				0C0AA8F41E52AAD1008B4B00 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CC744B11E2C6781007EC830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,9 +124,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0AA8EA1E52AAAE008B4B00 /* bbuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C0AA8EB1E52AAAE008B4B00 /* bbuddyTests.swift */,
+				0C0AA8F81E52AB83008B4B00 /* AccountTest.swift */,
+				0C0AA8FA1E52AB9A008B4B00 /* GeneratedMocks.swift */,
+				0C0AA8ED1E52AAAE008B4B00 /* Info.plist */,
+			);
+			path = bbuddyTests;
+			sourceTree = "<group>";
+		};
 		0C9BE17D1E481B580092439B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C0AA8F51E52AAD1008B4B00 /* Cuckoo.framework */,
 				0C1A95F21E4EC7E500B03F12 /* Nimble.framework */,
 				0C1A95F31E4EC7E500B03F12 /* Quick.framework */,
 				0C1A95B91E4B5E5300B03F12 /* Curry.framework */,
@@ -116,6 +160,7 @@
 				0C1A95CC1E4EC76100B03F12 /* Cartfile.private */,
 				0C545FC81E4869AC004225E7 /* Cartfile */,
 				0CC744B61E2C6781007EC830 /* bbuddy */,
+				0C0AA8EA1E52AAAE008B4B00 /* bbuddyTests */,
 				0CC744B51E2C6781007EC830 /* Products */,
 				0C9BE17D1E481B580092439B /* Frameworks */,
 			);
@@ -125,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0CC744B41E2C6781007EC830 /* bbuddy.app */,
+				0C0AA8E91E52AAAE008B4B00 /* bbuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +201,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0C0AA8E81E52AAAE008B4B00 /* bbuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C0AA8F21E52AAAE008B4B00 /* Build configuration list for PBXNativeTarget "bbuddyTests" */;
+			buildPhases = (
+				0C0AA8E51E52AAAE008B4B00 /* Sources */,
+				0C0AA8E61E52AAAE008B4B00 /* Frameworks */,
+				0C0AA8E71E52AAAE008B4B00 /* Resources */,
+				0C0AA8F71E52AAD9008B4B00 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C0AA8EF1E52AAAE008B4B00 /* PBXTargetDependency */,
+			);
+			name = bbuddyTests;
+			productName = bbuddyTests;
+			productReference = 0C0AA8E91E52AAAE008B4B00 /* bbuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0CC744B31E2C6781007EC830 /* bbuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CC744C81E2C6781007EC830 /* Build configuration list for PBXNativeTarget "bbuddy" */;
@@ -183,6 +248,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "odd-e";
 				TargetAttributes = {
+					0C0AA8E81E52AAAE008B4B00 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0CC744B31E2C6781007EC830;
+					};
 					0CC744B31E2C6781007EC830 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -203,11 +273,19 @@
 			projectRoot = "";
 			targets = (
 				0CC744B31E2C6781007EC830 /* bbuddy */,
+				0C0AA8E81E52AAAE008B4B00 /* bbuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C0AA8E71E52AAAE008B4B00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CC744B21E2C6781007EC830 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +301,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C0AA8F71E52AAD9008B4B00 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/bbuddyTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"$PROJECT_DIR\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"$PROJECT_DIR/bbuddy\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n${PROJECT_DIR}/Carthage/Checkouts/Cuckoo/run generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Api.swift\"\n# ... and so forth\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.";
+		};
 		0C9BE1821E481C0B0092439B /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +342,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C0AA8E51E52AAAE008B4B00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0AA8EC1E52AAAE008B4B00 /* bbuddyTests.swift in Sources */,
+				0C0AA8FB1E52AB9A008B4B00 /* GeneratedMocks.swift in Sources */,
+				0C0AA8F91E52AB83008B4B00 /* AccountTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CC744B01E2C6781007EC830 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +373,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0C0AA8EF1E52AAAE008B4B00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CC744B31E2C6781007EC830 /* bbuddy */;
+			targetProxy = 0C0AA8EE1E52AAAE008B4B00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0CC744BD1E2C6781007EC830 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -292,6 +401,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0C0AA8F01E52AAAE008B4B00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = bbuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Odd-e.bbuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bbuddy.app/bbuddy";
+			};
+			name = Debug;
+		};
+		0C0AA8F11E52AAAE008B4B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = bbuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Odd-e.bbuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bbuddy.app/bbuddy";
+			};
+			name = Release;
+		};
 		0CC744C61E2C6781007EC830 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -316,6 +459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -366,6 +510,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -420,6 +565,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C0AA8F21E52AAAE008B4B00 /* Build configuration list for PBXNativeTarget "bbuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0AA8F01E52AAAE008B4B00 /* Debug */,
+				0C0AA8F11E52AAAE008B4B00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0CC744AF1E2C6781007EC830 /* Build configuration list for PBXProject "bbuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
