@@ -13,9 +13,9 @@ enum ApiDefinition {
     case signIn(email: String, password: String)
     case showUser(id: Int)
     case showAccounts
-    case addAccount(account: Account)
-    case updateAccount(account: Account)
-    case deleteAccount(account: Account)
+    case addAccount(account: DTO.Account)
+    case updateAccount(account: DTO.Account)
+    case deleteAccount(account: DTO.Account)
 }
 
 protocol Authorizable {

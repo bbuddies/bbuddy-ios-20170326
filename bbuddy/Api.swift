@@ -86,7 +86,7 @@ class Api {
         }
     }
     
-    func showAccounts(_ action: @escaping ([Account]) -> Void) {
+    func showAccounts(_ action: @escaping ([DTO.Account]) -> Void) {
         request(.showAccounts) { [unowned me = self] response in
             do {
                 action(try me.mapArray(response))
@@ -96,19 +96,19 @@ class Api {
         }
     }
     
-    func addAccount(_ account: Account, to action: @escaping () -> Void) {
+    func addAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
         request(.addAccount(account: account)) { _ in
             action()
         }
     }
     
-    func updateAccount(_ account: Account, to action: @escaping () -> Void){
+    func updateAccount(_ account: DTO.Account, to action: @escaping () -> Void){
         request(.updateAccount(account: account)) { _ in
             action()
         }
     }
     
-    func deleteAccount(_ account: Account, to action: @escaping () -> Void){
+    func deleteAccount(_ account: DTO.Account, to action: @escaping () -> Void){
         request(.deleteAccount(account: account)) { _ in
             action()
         }

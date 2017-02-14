@@ -10,7 +10,7 @@ import UIKit
 
 class AccountsTableViewController: UITableViewController {
     
-    private var accounts = [Account]() {
+    private var accounts = Array<DTO.Account>() {
         didSet{
             tableView.reloadData()
         }
@@ -26,7 +26,7 @@ class AccountsTableViewController: UITableViewController {
         }
     }
     
-    private func deleteAccount(_ account: Account){
+    private func deleteAccount(_ account: DTO.Account){
         api.deleteAccount(account) {
             
         }
@@ -97,7 +97,7 @@ class AccountsTableViewController: UITableViewController {
         let destinationViewController = segue.destination
         if let accountDetailViewController = destinationViewController as? AccountDetailViewController {
             if segue.identifier == Storyboard.AddAccountSegue {
-                accountDetailViewController.account = Account()
+                accountDetailViewController.account = DTO.Account()
             } else if segue.identifier == Storyboard.EditAccountSegue {
                 if let accountIndex = tableView.indexPathForSelectedRow?.row {
                     accountDetailViewController.account = accounts[accountIndex]

@@ -15,7 +15,7 @@ class AccountDetailViewController: UIViewController {
     
     private let api = Api()
     
-    var account: Account! {
+    var account: DTO.Account! {
         didSet {
             updateUI()
         }
@@ -42,7 +42,7 @@ class AccountDetailViewController: UIViewController {
         }
     }
     
-    private func addAccount(_ account: Account) {
+    private func addAccount(_ account: DTO.Account) {
         api.addAccount(account) {
             DispatchQueue.main.async { [unowned me = self] in
                 _ = me.navigationController?.popViewController(animated: true)
@@ -50,7 +50,7 @@ class AccountDetailViewController: UIViewController {
         }
     }
     
-    private func updateAccount(_ account: Account) {
+    private func updateAccount(_ account: DTO.Account) {
         api.updateAccount(account) {
             DispatchQueue.main.async { [unowned me = self] in
                 _ = me.navigationController?.popViewController(animated: true)

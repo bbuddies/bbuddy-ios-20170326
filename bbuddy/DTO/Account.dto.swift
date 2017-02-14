@@ -11,15 +11,17 @@ import Argo
 import Curry
 import Runes
 
-struct Account {
-    var id: Int = 0
-    var name: String = ""
-    var balance: Int = 0
+struct DTO{
+    struct Account {
+        var id: Int = 0
+        var name: String = ""
+        var balance: Int = 0
+    }
 }
 
-extension Account: Decodable {
-    static func decode(_ json: JSON) -> Decoded<Account> {
-        return curry(Account.init)
+extension DTO.Account: Decodable {
+    static func decode(_ json: JSON) -> Decoded<DTO.Account> {
+        return curry(DTO.Account.init)
             <^> json <| "id"
             <*> json <| "name"
             <*> json <| "balance"

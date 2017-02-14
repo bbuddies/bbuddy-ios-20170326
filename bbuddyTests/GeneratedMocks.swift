@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: bbuddy/Api.swift at 2017-02-14 03:08:33 +0000
+// MARK: - Mocks generated from file: bbuddy/Api.swift at 2017-02-14 09:03:19 +0000
 
 //
 //  Api.swift
@@ -33,20 +33,20 @@ class MockApi: Api, Cuckoo.Mock {
         return manager.call("signIn(_: String, password: String, action: @escaping () -> Void)", parameters: (email, password, action), original: observed.map { o in return { (email: String, password: String, action: @escaping () -> Void) in o.signIn(email, password: password, action: action) } })
     }
     
-    override func showAccounts(_ action: @escaping ([Account]) -> Void) {
-        return manager.call("showAccounts(_: @escaping ([Account]) -> Void)", parameters: (action), original: observed.map { o in return { (action: @escaping ([Account]) -> Void) in o.showAccounts(action) } })
+    override func showAccounts(_ action: @escaping ([DTO.Account]) -> Void) {
+        return manager.call("showAccounts(_: @escaping ([DTO.Account]) -> Void)", parameters: (action), original: observed.map { o in return { (action: @escaping ([DTO.Account]) -> Void) in o.showAccounts(action) } })
     }
     
-    override func addAccount(_ account: Account, to action: @escaping () -> Void) {
-        return manager.call("addAccount(_: Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: Account, action: @escaping () -> Void) in o.addAccount(account, to: action) } })
+    override func addAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
+        return manager.call("addAccount(_: DTO.Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: DTO.Account, action: @escaping () -> Void) in o.addAccount(account, to: action) } })
     }
     
-    override func updateAccount(_ account: Account, to action: @escaping () -> Void) {
-        return manager.call("updateAccount(_: Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: Account, action: @escaping () -> Void) in o.updateAccount(account, to: action) } })
+    override func updateAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
+        return manager.call("updateAccount(_: DTO.Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: DTO.Account, action: @escaping () -> Void) in o.updateAccount(account, to: action) } })
     }
     
-    override func deleteAccount(_ account: Account, to action: @escaping () -> Void) {
-        return manager.call("deleteAccount(_: Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: Account, action: @escaping () -> Void) in o.deleteAccount(account, to: action) } })
+    override func deleteAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
+        return manager.call("deleteAccount(_: DTO.Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: DTO.Account, action: @escaping () -> Void) in o.deleteAccount(account, to: action) } })
     }
     
     struct __StubbingProxy_Api: Cuckoo.StubbingProxy {
@@ -61,24 +61,24 @@ class MockApi: Api, Cuckoo.Mock {
             return Cuckoo.StubNoReturnFunction(stub: manager.createStub("signIn(_: String, password: String, action: @escaping () -> Void)", parameterMatchers: matchers))
         }
         
-        func showAccounts<M1: Cuckoo.Matchable>(_ action: M1) -> Cuckoo.StubNoReturnFunction<(([Account]) -> Void)> where M1.MatchedType == ([Account]) -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(([Account]) -> Void)>] = [wrap(matchable: action) { $0 }]
-            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("showAccounts(_: @escaping ([Account]) -> Void)", parameterMatchers: matchers))
+        func showAccounts<M1: Cuckoo.Matchable>(_ action: M1) -> Cuckoo.StubNoReturnFunction<(([DTO.Account]) -> Void)> where M1.MatchedType == ([DTO.Account]) -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(([DTO.Account]) -> Void)>] = [wrap(matchable: action) { $0 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("showAccounts(_: @escaping ([DTO.Account]) -> Void)", parameterMatchers: matchers))
         }
         
-        func addAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(Account, () -> Void)> where M1.MatchedType == Account, M2.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
-            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("addAccount(_: Account, to: @escaping () -> Void)", parameterMatchers: matchers))
+        func addAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(DTO.Account, () -> Void)> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("addAccount(_: DTO.Account, to: @escaping () -> Void)", parameterMatchers: matchers))
         }
         
-        func updateAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(Account, () -> Void)> where M1.MatchedType == Account, M2.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
-            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("updateAccount(_: Account, to: @escaping () -> Void)", parameterMatchers: matchers))
+        func updateAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(DTO.Account, () -> Void)> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("updateAccount(_: DTO.Account, to: @escaping () -> Void)", parameterMatchers: matchers))
         }
         
-        func deleteAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(Account, () -> Void)> where M1.MatchedType == Account, M2.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
-            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("deleteAccount(_: Account, to: @escaping () -> Void)", parameterMatchers: matchers))
+        func deleteAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(DTO.Account, () -> Void)> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("deleteAccount(_: DTO.Account, to: @escaping () -> Void)", parameterMatchers: matchers))
         }
     }
     
@@ -100,27 +100,27 @@ class MockApi: Api, Cuckoo.Mock {
         }
         
         @discardableResult
-        func showAccounts<M1: Cuckoo.Matchable>(_ action: M1) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == ([Account]) -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(([Account]) -> Void)>] = [wrap(matchable: action) { $0 }]
-            return manager.verify("showAccounts(_: @escaping ([Account]) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        func showAccounts<M1: Cuckoo.Matchable>(_ action: M1) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == ([DTO.Account]) -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(([DTO.Account]) -> Void)>] = [wrap(matchable: action) { $0 }]
+            return manager.verify("showAccounts(_: @escaping ([DTO.Account]) -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
         @discardableResult
-        func addAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == Account, M2.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
-            return manager.verify("addAccount(_: Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        func addAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return manager.verify("addAccount(_: DTO.Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
         @discardableResult
-        func updateAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == Account, M2.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
-            return manager.verify("updateAccount(_: Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        func updateAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return manager.verify("updateAccount(_: DTO.Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
         
         @discardableResult
-        func deleteAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == Account, M2.MatchedType == () -> Void {
-            let matchers: [Cuckoo.ParameterMatcher<(Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
-            return manager.verify("deleteAccount(_: Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        func deleteAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return manager.verify("deleteAccount(_: DTO.Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
     }
 }
@@ -131,19 +131,19 @@ class ApiStub: Api {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-    override func showAccounts(_ action: @escaping ([Account]) -> Void) {
+    override func showAccounts(_ action: @escaping ([DTO.Account]) -> Void) {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-    override func addAccount(_ account: Account, to action: @escaping () -> Void) {
+    override func addAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-    override func updateAccount(_ account: Account, to action: @escaping () -> Void) {
+    override func updateAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
-    override func deleteAccount(_ account: Account, to action: @escaping () -> Void) {
+    override func deleteAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
 }
