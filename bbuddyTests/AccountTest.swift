@@ -26,6 +26,20 @@ class AccountTest: QuickSpec {
                 account.save() {}
                 verify(api).addAccount(equal(to: accountDTO), to: anyClosure())
             }
+            it("update the account if with id"){
+                let accountDTO = DTO.Account(id: 1, name: "Existing", balance: 100)
+                let api = MockApi()
+                stub(api){ api in
+                    when(api).addAccount(equal(to: accountDTO), to: anyClosure()).then { account, action in action() }
+                    when(api).updateAccount(equal(to: accountDTO), to: anyClosure()).then { account, action in action() }
+                }
+                let account = Account(api: api)
+                account.id = 1
+                account.name = "Existing"
+                account.balance = 100
+                account.save() {}
+                verify(api).updateAccount(equal(to: accountDTO), to: anyClosure())
+            }
         }
     }
 }

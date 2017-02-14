@@ -10,6 +10,7 @@ import Foundation
 
 class Account {
     private var api:Api
+    var id = 0
     var name = ""
     var balance = 0
     
@@ -18,6 +19,7 @@ class Account {
     }
     
     func save(_ action: @escaping () -> Void){
-        api.addAccount(DTO.Account(id: 0, name: name, balance: balance), to: action)
+        let accountToUpdate = DTO.Account(id: id, name: name, balance: balance)
+        id == 0 ? api.addAccount(accountToUpdate, to: action) : api.updateAccount(accountToUpdate, to: action)
     }
 }
