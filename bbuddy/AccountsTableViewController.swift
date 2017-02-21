@@ -98,7 +98,7 @@ class AccountsTableViewController: UITableViewController {
         let destinationViewController = segue.destination
         if let accountDetailViewController = destinationViewController as? AccountDetailViewController {
             if segue.identifier == Storyboard.AddAccountSegue {
-                accountDetailViewController.account = Account(api: Api())
+                accountDetailViewController.account = Account()
             } else if segue.identifier == Storyboard.EditAccountSegue {
                 if let accountIndex = tableView.indexPathForSelectedRow?.row {
                     accountDetailViewController.account = Account.from(accounts[accountIndex])

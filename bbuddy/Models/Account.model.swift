@@ -13,7 +13,11 @@ class Account {
     var id = 0
     var name = ""
     var balance = 0
-    
+
+    convenience init(){
+        self.init(api: Api())
+    }
+
     init(api: Api){
         self.api = api
     }
@@ -24,7 +28,7 @@ class Account {
     }
 
     class func from(_ dto: DTO.Account) -> Account! {
-        let account = Account(api: Api())
+        let account = Account()
         account.id = dto.id
         account.name = dto.name
         account.balance = dto.balance
