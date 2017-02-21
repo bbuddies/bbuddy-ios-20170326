@@ -40,6 +40,7 @@
 		0CC744BF1E2C6781007EC830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744BD1E2C6781007EC830 /* Main.storyboard */; };
 		0CC744C11E2C6781007EC830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744C01E2C6781007EC830 /* Assets.xcassets */; };
 		0CC744C41E2C6781007EC830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744C21E2C6781007EC830 /* LaunchScreen.storyboard */; };
+		EBC6D92F1E3A9DBB80672EB7 /* Accounts.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6DAB39A17406061B40971 /* Accounts.model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		0CC744C01E2C6781007EC830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CC744C31E2C6781007EC830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CC744C51E2C6781007EC830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC6DAB39A17406061B40971 /* Accounts.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				0C0AA9001E52B892008B4B00 /* Account.model.swift */,
+				EBC6DAB39A17406061B40971 /* Accounts.model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
 				0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */,
 				0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */,
+				EBC6D92F1E3A9DBB80672EB7 /* Accounts.model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

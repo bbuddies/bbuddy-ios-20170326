@@ -10,26 +10,19 @@ import UIKit
 
 class AccountsTableViewController: UITableViewController {
     
-    private var accounts = Array<DTO.Account>() {
+    private var accounts = Accounts() {
         didSet{
             tableView.reloadData()
         }
     }
     
-    private let api = Api()
-    
-    
     private func fetchAccounts(){
-        api.showAccounts { accounts in
-            DispatchQueue.main.async { [unowned me = self] in
-                me.accounts = accounts
-            }
-        }
+        accounts.fetch(to: refresh)
     }
-    
-    private func deleteAccount(_ account: DTO.Account){
-        api.deleteAccount(account) {
-            
+
+    private func refresh(){
+        DispatchQueue.main.async { [unowned me = self] in
+            me.tableView.reloadData()
         }
     }
 
@@ -72,8 +65,7 @@ class AccountsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteAccount(accounts[indexPath.row])
-            accounts.remove(at: indexPath.row)
+            accounts.delete(at: indexPath.row, to: refresh)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -101,7 +93,7 @@ class AccountsTableViewController: UITableViewController {
                 accountDetailViewController.account = Account()
             } else if segue.identifier == Storyboard.EditAccountSegue {
                 if let accountIndex = tableView.indexPathForSelectedRow?.row {
-                    accountDetailViewController.account = Account.from(accounts[accountIndex])
+                    accountDetailViewController.account = accounts[accountIndex]
                 }
             }
         }
