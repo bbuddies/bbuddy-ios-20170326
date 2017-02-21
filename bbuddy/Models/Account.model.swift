@@ -22,4 +22,12 @@ class Account {
         let accountToUpdate = DTO.Account(id: id, name: name, balance: balance)
         id == 0 ? api.addAccount(accountToUpdate, to: action) : api.updateAccount(accountToUpdate, to: action)
     }
+
+    class func from(_ dto: DTO.Account) -> Account! {
+        let account = Account(api: Api())
+        account.id = dto.id
+        account.name = dto.name
+        account.balance = dto.balance
+        return account
+    }
 }

@@ -18,6 +18,7 @@ class AccountsTableViewController: UITableViewController {
     
     private let api = Api()
     
+    
     private func fetchAccounts(){
         api.showAccounts { accounts in
             DispatchQueue.main.async { [unowned me = self] in
@@ -97,10 +98,10 @@ class AccountsTableViewController: UITableViewController {
         let destinationViewController = segue.destination
         if let accountDetailViewController = destinationViewController as? AccountDetailViewController {
             if segue.identifier == Storyboard.AddAccountSegue {
-                accountDetailViewController.account = DTO.Account()
+                accountDetailViewController.account = Account(api: Api())
             } else if segue.identifier == Storyboard.EditAccountSegue {
                 if let accountIndex = tableView.indexPathForSelectedRow?.row {
-                    accountDetailViewController.account = accounts[accountIndex]
+                    accountDetailViewController.account = Account.from(accounts[accountIndex])
                 }
             }
         }
