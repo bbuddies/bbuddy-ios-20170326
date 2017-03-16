@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" title="Budgets" id="P4S-cv-3kn">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="aor-LH-AXD">
                             <connections>
-                                <segue destination="OH7-6y-ngl" kind="show" id="XuH-ez-eYg"/>
+                                <segue destination="OH7-6y-ngl" kind="show" identifier="AddBudget" id="XuH-ez-eYg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,6 +109,10 @@
                             <constraint firstItem="Jx6-px-LJb" firstAttribute="top" secondItem="dfS-XK-OIK" secondAttribute="bottom" constant="8" id="dgw-ac-kNV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountField" destination="dpx-Kb-l7V" id="zWH-C4-AK5"/>
+                        <outlet property="monthField" destination="OMi-Wt-kMU" id="kvB-aC-GsY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeR-0Q-gdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

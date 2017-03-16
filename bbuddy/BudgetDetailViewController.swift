@@ -9,30 +9,21 @@
 import UIKit
 
 class BudgetDetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    @IBOutlet weak var monthField: UITextField!
+    @IBOutlet weak var amountField: UITextField!
+    var budget: Budget!
     
     @IBAction func saveBudget(_ sender: UIButton) {
-        _ = navigationController?.popViewController(animated: true)
+        if let month = monthField.text, let amount = Int(amountField.text ?? ""){
+            budget.month = month
+            budget.amount = amount
+            budget.save {
+                DispatchQueue.main.async { [unowned me = self] in
+                    _ = me.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
