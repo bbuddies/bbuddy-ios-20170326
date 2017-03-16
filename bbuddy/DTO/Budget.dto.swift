@@ -18,3 +18,12 @@ extension DTO{
         var amount: Int = 0
     }
 }
+
+extension DTO.Budget: Decodable {
+    static func decode(_ json: JSON) -> Decoded<DTO.Budget> {
+        return curry(DTO.Budget.init)
+            <^> json <| "id"
+            <*> json <| "month"
+            <*> json <| "amount"
+    }
+}
