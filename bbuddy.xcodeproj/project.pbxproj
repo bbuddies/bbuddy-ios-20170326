@@ -55,6 +55,7 @@
 		0CD98E131E7A89A60017C334 /* Cuckoo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C0AA8F51E52AAD1008B4B00 /* Cuckoo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CD98E141E7A89A60017C334 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C1A95F21E4EC7E500B03F12 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CD98E151E7A89A60017C334 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C1A95F31E4EC7E500B03F12 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CD98E171E7AA2250017C334 /* BudgetsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD98E161E7AA2250017C334 /* BudgetsTest.swift */; };
 		14845eab1faa2b1528a538ff /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B91E4B5E5300B03F12 /* Curry.framework */; };
 		19fe892539bc4e20dfcc9d20 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */; };
 		222da3d8b5e0d56287d188d0 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FC61E486598004225E7 /* MeViewController.swift */; };
@@ -159,6 +160,7 @@
 		0CD98E0A1E7A762F0017C334 /* Budget.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.model.swift; sourceTree = "<group>"; };
 		0CD98E0D1E7A7D730017C334 /* BudgetTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTest.swift; sourceTree = "<group>"; };
 		0CD98E0F1E7A81750017C334 /* Budget.dto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Budget.dto.swift; path = DTO/Budget.dto.swift; sourceTree = "<group>"; };
+		0CD98E161E7AA2250017C334 /* BudgetsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetsTest.swift; sourceTree = "<group>"; };
 		0c25ed4e90875cbf6e4dd15c /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		746D8FCE1E6EE6C8007D75D1 /* bbuddy-cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bbuddy-cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC6DAB39A17406061B40971 /* Accounts.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.model.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				0C1282F41E73B3ED00D72735 /* AccountsTest.swift */,
 				0C0AA8ED1E52AAAE008B4B00 /* Info.plist */,
 				0CD98E0D1E7A7D730017C334 /* BudgetTest.swift */,
+				0CD98E161E7AA2250017C334 /* BudgetsTest.swift */,
 			);
 			path = bbuddyTests;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD98E171E7AA2250017C334 /* BudgetsTest.swift in Sources */,
 				0C1282F51E73B3ED00D72735 /* AccountsTest.swift in Sources */,
 				0C0AA9031E52E575008B4B00 /* GeneratedMocks.swift in Sources */,
 				0CD98E0E1E7A7D730017C334 /* BudgetTest.swift in Sources */,
