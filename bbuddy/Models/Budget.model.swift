@@ -9,10 +9,22 @@
 import Foundation
 
 class Budget{
+    var id = 0
     var month = ""
     var amount = 0
     
+    private var api: Api!
+    
+    convenience init(){
+        self.init(api: Api())
+    }
+    
+    init(api: Api){
+        self.api = api
+    }
+    
     func save(_ action: @escaping () -> Void){
-        action()
+        let budgetToUpdate = DTO.Budget(id: id, month: month, amount: amount)
+        api.addBudget(budgetToUpdate, to: action)
     }
 }
