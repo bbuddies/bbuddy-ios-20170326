@@ -13,6 +13,10 @@ class Budgets{
     private var budgets = Array<DTO.Budget>()
     private var api: Api!
 
+    convenience init(){
+        self.init(api: Api())
+    }
+
     init(api: Api){
         self.api = api
     }
